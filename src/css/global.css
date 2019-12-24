@@ -1,0 +1,13 @@
+* {
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+}
+
+*::selection {
+  color: white;
+  background: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
