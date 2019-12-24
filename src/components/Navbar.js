@@ -10,6 +10,9 @@ class Navbar extends React.Component {
         <div>
           <ul>
             <Item>Introduce</Item>
+            <Link to="/stacks">
+              <Item>What we used</Item>
+            </Link>
             <Link to="/products">
               <Item>What we made</Item>
             </Link>

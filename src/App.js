@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 /** Routes */
 import Home from './pages/Home'
 import Products from './pages/Products'
+import Stacks from './pages/Stacks'
 
 import './css/reset.css'
 import './css/fonts.css'
@@ -22,6 +23,7 @@ class App extends React.Component {
         <Router>
           <Navbar />
           <Route exact path="/" component={Home} />
+          <Route path="/stacks" component={Stacks} />
           <Route path="/products" component={Products} />
         </Router>
       </Container>

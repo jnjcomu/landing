@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from '../components/Button'
 
-import DimigoinImage from '../assets/Dimigoin-Mockup.png'
-import EchoImage from '../assets/Echo-Mockup.png'
-import YourIllust from '../assets/Your-Illust.svg'
+import DimigoinImage from '../assets/images/Dimigoin-Mockup.png'
+import EchoImage from '../assets/images/Echo-Mockup.png'
+import YourIllust from '../assets/images/Your-Illust.svg'
 
 const ProductList = [
   {

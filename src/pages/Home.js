@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Button from '../components/Button'
 
-import DeveloperIllust from '../assets/Developer-Illust.svg'
+import DeveloperIllust from '../assets/images/Developer-Illust.svg'
 
 class Home extends React.Component {
   apply () {
