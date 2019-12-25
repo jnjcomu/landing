@@ -62,7 +62,6 @@ const Identity = styled.span`
   word-break: keep-all;
   font-size: 5rem;
   font-weight: lighter;
-  font-family: 'Spoqa Han Sans';
   line-height: 100px;
   justify-self: center;
   align-items: center;
