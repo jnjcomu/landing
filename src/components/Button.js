@@ -26,7 +26,7 @@ const JButton = styled.button`
   transition: all 0.3s ease 0s;
   outline: none;
   user-select: none;
-  background-color: rgb(248, 249, 250);
+  background-color: #f8f9fa;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
 
   ${props => (props.disabled ? ''

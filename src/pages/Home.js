@@ -20,9 +20,11 @@ class Home extends React.Component {
           <Identity>
             내 마음대로
           </Identity>
-          <Button onClick={this.apply}>
-            지원하기
-          </Button>
+          <ButtonWrapper>
+            <Button onClick={this.apply}>
+              지원하기
+            </Button>
+          </ButtonWrapper>
         </IdentityWrapper>
         <Illust
           src={DeveloperIllust}
@@ -65,6 +67,13 @@ const Identity = styled.span`
   line-height: 100px;
   justify-self: center;
   align-items: center;
+`
+
+const ButtonWrapper = styled.div`
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid black;
+  width: 15rem;
 `
 
 export default Home
