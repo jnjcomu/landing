@@ -146,6 +146,10 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+
+  @media (max-width: 690px) {
+    flex-direction: column;
+  }
 `
 
 const Image = styled.img`
