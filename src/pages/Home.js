@@ -36,44 +36,41 @@ class Home extends React.Component {
 }
 
 const Container = styled.div`
-  width: calc(100vw - 16rem);
-  height: calc(100vh - 7rem);
-  padding: 1rem 8rem;
+  width: 100vw;
+  flex: 1;
+
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 `
 
 const Illust = styled.img`
-  height: 40rem;
-  float: right;
-  margin-left: auto;
-  align-self: center;
+  height: 37rem;
 `
 
 const IdentityWrapper = styled.div`
-  padding: 0 1rem;
-  align-self: center;
-  width: 50%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
 `
 
 const Identity = styled.span`
   word-wrap: break-word;
-  word-break: keep-all;
-  font-size: 5rem;
+  word-break: break-all;
+  font-size: 4.5rem;
   font-weight: lighter;
   line-height: 100px;
-  justify-self: center;
   align-items: center;
 `
 
 const ButtonWrapper = styled.div`
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 2px solid black;
-  width: 15rem;
+  border-top: 2.7px solid black;
 `
 
 export default Home

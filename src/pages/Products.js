@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from '../components/Button'
 
+/** Product Logos */
 import DimigoinImage from '../assets/images/Dimigoin-Mockup.png'
 import EchoImage from '../assets/images/Echo-Mockup.png'
 import YourIllust from '../assets/images/Your-Illust.svg'
@@ -64,14 +65,14 @@ class Products extends React.Component {
   render () {
     return (
       <Container>
-        <BrandWrapper>
-          <Brand>
+        <ProductWrapper>
+          <Product>
             {ProductList[this.state.currentIdx].title}
-          </Brand>
+          </Product>
           <Description>
             {ProductList[this.state.currentIdx].description}
           </Description>
-        </BrandWrapper>
+        </ProductWrapper>
         <Image
           src={ProductList[this.state.currentIdx].image}
           alt={ProductList[this.state.currentIdx].imageAlt}
@@ -96,34 +97,41 @@ class Products extends React.Component {
 }
 
 const Container = styled.div`
-  width: calc(100vw - 8rem);
-  height: calc(100vh - 7rem);
-  padding: 1rem 4rem;
+  width: 100vw;
+  flex: 1;
+
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  @media (max-width: 805px) {
+    flex-direction: column;
+  }
 `
 
 const Image = styled.img`
-  height: 30rem;
-  float: right;
-  margin-left: auto;
-  align-self: center;
+  width: 25rem;
+
+  @media (max-width: 805px) {
+    display: none;
+  }
 `
 
-const BrandWrapper = styled.div`
-  padding: 0 1rem;
-  align-self: center;
-  width: 50%;
+const ProductWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
+  flex: 1;
 `
 
-const Brand = styled.span`
+const Product = styled.span`
   word-wrap: break-word;
   word-break: keep-all;
   font-size: 5rem;
-  justify-self: center;
   align-items: center;
   font-weight: lighter;
 `
@@ -135,18 +143,25 @@ const Description = styled.span`
   font-size: 1.5rem;
   line-height: 40px;
   font-weight: lighter;
-  justify-self: center;
   align-items: center;
 `
 
 const Pagination = styled.div`
-  position: absolute;
-  bottom: 50px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  @media (max-width: 805px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+  }
 
-  button {
+  @media (min-width: 805px) {
+    position: absolute;
+    bottom: 50px;
+    flex: 1;
+    display: flex;
+  }
+
+  button:first-child {
     margin-right: 20px;
   }
 `

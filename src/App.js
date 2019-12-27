@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import styled from 'styled-components'
 
 import Navbar from './components/Navbar'
 
@@ -19,22 +19,22 @@ document.title = 'JnJ 2020'
 class App extends React.Component {
   render () {
     return (
-      <Container>
+      <FlexContainer>
         <Router>
           <Navbar />
           <Route exact path="/" component={Home} />
           <Route path="/stacks" component={Stacks} />
           <Route path="/products" component={Products} />
         </Router>
-      </Container>
+      </FlexContainer>
     )
   }
 }
 
-const Container = styled.div`
-  height: 100vh;
-  width: 100vw;
+const FlexContainer = styled.div`
   display: flex;
+  width: 100vw;
+  min-height: 100vh;
   flex-direction: column;
 `
 

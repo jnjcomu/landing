@@ -104,14 +104,14 @@ class Stacks extends React.Component {
   render () {
     return (
       <Container>
-        <BrandWrapper>
-          <Brand>
+        <StackWrapper>
+          <Stack>
             {StackList[this.state.currentIdx].title}
-          </Brand>
+          </Stack>
           <Description>
             {StackList[this.state.currentIdx].description}
           </Description>
-        </BrandWrapper>
+        </StackWrapper>
         <Image
           src={StackList[this.state.currentIdx].image}
           alt={StackList[this.state.currentIdx].imageAlt}
@@ -136,34 +136,37 @@ class Stacks extends React.Component {
 }
 
 const Container = styled.div`
-  width: calc(100vw - 8rem);
-  height: calc(100vh - 7rem);
-  padding: 1rem 4rem;
+  width: 100vw;
+  flex: 1;
+
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 `
 
 const Image = styled.img`
   width: 25rem;
-  float: right;
-  margin-left: auto;
-  align-self: center;
+
+  @media (max-width: 690px) {
+    display: none;
+  }
 `
 
-const BrandWrapper = styled.div`
-  padding: 0 1rem;
-  align-self: center;
-  width: 50%;
+const StackWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
+  flex: 1;
 `
 
-const Brand = styled.span`
+const Stack = styled.span`
   word-wrap: break-word;
   word-break: keep-all;
   font-size: 5rem;
-  justify-self: center;
   align-items: center;
   font-weight: lighter;
 `
@@ -175,18 +178,25 @@ const Description = styled.span`
   font-size: 1.5rem;
   line-height: 40px;
   font-weight: lighter;
-  justify-self: center;
   align-items: center;
 `
 
 const Pagination = styled.div`
-  position: absolute;
-  bottom: 50px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  @media (max-width: 690px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+  }
 
-  button {
+  @media (min-width: 690px) {
+    position: absolute;
+    bottom: 50px;
+    flex: 1;
+    display: flex;
+  }
+
+  button:first-child {
     margin-right: 20px;
   }
 `
