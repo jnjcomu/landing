@@ -114,7 +114,7 @@ const Container = styled.div`
 `
 
 const Image = styled.img`
-  width: 25rem;
+  width: 50vw;
 
   @media (max-width: 805px) {
     display: none;

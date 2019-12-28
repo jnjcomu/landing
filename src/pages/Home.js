@@ -26,7 +26,7 @@ class Home extends React.Component {
             </Button>
           </ButtonWrapper>
         </IdentityWrapper>
-        <Illust
+        <IllustBox
           src={DeveloperIllust}
           alt="Thingking Code"
         />
@@ -48,8 +48,13 @@ const Container = styled.div`
   flex-wrap: wrap;
 `
 
-const Illust = styled.img`
+const IllustBox = styled.img`
   height: 37rem;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    height: auto;
+  }
 `
 
 const IdentityWrapper = styled.div`

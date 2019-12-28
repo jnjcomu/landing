@@ -8,7 +8,7 @@ class Navbar extends React.Component {
       <Nav>
         <Brand>JnJ Communications</Brand>
         <div>
-          <ul>
+          <ItemWrapper>
             <Item>Introduce</Item>
             <Link to="/stacks">
               <Item>What we used</Item>
@@ -16,7 +16,7 @@ class Navbar extends React.Component {
             <Link to="/products">
               <Item>What we made</Item>
             </Link>
-          </ul>
+          </ItemWrapper>
         </div>
       </Nav>
     )
@@ -32,6 +32,10 @@ const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @media (max-width: 1100px) {
+    justify-content: center;
+  }
 `
 
 const Brand = styled.h1`
@@ -43,6 +47,16 @@ const Brand = styled.h1`
   letter-spacing: -1px;
   margin: 0;
   cursor: default;
+
+  @media (max-width: 1100px) {
+    position: unset;
+  }
+`
+
+const ItemWrapper = styled.ul`
+  @media (max-width: 1100px) {
+    display: none;
+  }
 `
 
 const Item = styled.span`
